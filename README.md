@@ -1,10 +1,6 @@
-# NGX-UPLOADER
+# NGX-UPLOADER-FILE
 
 This is an Angular Library for uploading files. It supports: File Upload and Preview (additionally preview images with lightbox), validation, image cropper , drag and drop with multi language support.
-
-Tested on Angular 6+. Supports Server Side Rendering.
-
-> **Breaking Changes:** [Check Changes](https://github.com/vugar005/ngx-uploader-file/blob/master/breaking-changes-v10.md) changes if you come from version < 10.
 
 - [Install](#install)
 - [Usage](#usage)
@@ -58,7 +54,7 @@ public abstract uploadFile(fileItem: FilePreviewModel): Observable<UploadRespons
 public abstract removeFile(fileItem: FilePreviewModel): Observable<any>;
 ```
 
-You can check DEMO adapter [here](https://github.com/vugar005/ngx-uploader-file/tree/master/projects/file-picker/src/lib/mock-file-picker.adapter.ts)
+You can check DEMO adapter [here](https://github.com/IsaiasCardenasM/ngx-uploader-file/tree/master/projects/file-picker/src/lib/mock-file-picker.adapter.ts)
 
 #### Now you can use it in your template
 
@@ -185,7 +181,7 @@ Emitted for every file */
 
 All validations are emitted through <b> ValidationError </b>event.
 
-To listen to validation errors (in case you provided validations), validationError event is emitted. validationError event implements interface [ValidationError](https://github.com/vugar005/ngx-uploader-file/blob/master/projects/file-picker/src/lib/validation-error.model.ts)
+To listen to validation errors (in case you provided validations), validationError event is emitted. validationError event implements interface [ValidationError](https://github.com/IsaiasCardenasM/ngx-uploader-file/blob/master/projects/file-picker/src/lib/validation-error.model.ts)
 and which emits failed file and error type.
 
 Supported validations:
@@ -274,11 +270,11 @@ II) To use custom file preview template, pass your custom template as below:
 </ng-template>
 ```
 
-In custom template <b>uploadProgress</b> and <b>fileItem</b> (which implements [FilePrevieModel](https://github.com/vugar005/ngx-uploader-file/blob/master/projects/file-picker/src/lib/file-preview.model.ts) interface) are exposed .
+In custom template <b>uploadProgress</b> and <b>fileItem</b> (which implements [FilePrevieModel](https://github.com/IsaiasCardenasM/ngx-uploader-file/blob/master/projects/file-picker/src/lib/file-preview.model.ts) interface) are exposed .
 
 ## Multi Language
 
-You can add multi language support for library by providing **_captions_** object (which implements [UploaderCaptions](https://github.com/vugar005/ngx-uploader-file/blob/master/projects/file-picker/src/lib/uploader-captions.ts) interface).
+You can add multi language support for library by providing **_captions_** object (which implements [UploaderCaptions](https://github.com/IsaiasCardenasM/ngx-uploader-file/blob/master/projects/file-picker/src/lib/uploader-captions.ts) interface).
 
 Check [Demo](https://stackblitz.com/edit/ngx-uploader-file?file=src%2Fapp%2Fadvanced-demo%2Fadvanced-demo.component.html)
 
