@@ -1,14 +1,14 @@
 # NGX-AWESOME-UPLOADER
 
-![alt-text](https://raw.githubusercontent.com/vugar005/ngx-uploader/master/angular-image.gif?raw=true)
+![alt-text](https://raw.githubusercontent.com/vugar005/ngx-uploader-file/master/angular-image.gif?raw=true)
 
-[![npm](https://img.shields.io/npm/l/ngx-uploader.svg)]() [![NPM Downloads](https://img.shields.io/npm/dt/ngx-uploader.svg)](https://www.npmjs.com/package/ngx-uploader) [![npm demo](https://img.shields.io/badge/demo-online-ed1c46.svg)](https://stackblitz.com/edit/ngx-uploader?file=src%2Fapp%2Fsimple-demo%2Fsimple-demo.component.ts) [![npm](https://img.shields.io/twitter/follow/vugar005.svg?label=Follow)](https://twitter.com/vugar005) [![npm](https://img.shields.io/github/issues/vugar005/ngx-uploader.svg)](https://github.com/vugar005/ngx-uploader) [![npm](https://img.shields.io/github/last-commit/vugar005/ngx-uploader.svg)](https://github.com/vugar005/ngx-uploader) ![npm](https://img.shields.io/readthedocs/ngx-uploader.svg)
+[![npm](https://img.shields.io/npm/l/ngx-uploader-file.svg)]() [![NPM Downloads](https://img.shields.io/npm/dt/ngx-uploader-file.svg)](https://www.npmjs.com/package/ngx-uploader-file) [![npm demo](https://img.shields.io/badge/demo-online-ed1c46.svg)](https://stackblitz.com/edit/ngx-uploader-file?file=src%2Fapp%2Fsimple-demo%2Fsimple-demo.component.ts) [![npm](https://img.shields.io/twitter/follow/vugar005.svg?label=Follow)](https://twitter.com/vugar005) [![npm](https://img.shields.io/github/issues/vugar005/ngx-uploader-file.svg)](https://github.com/vugar005/ngx-uploader-file) [![npm](https://img.shields.io/github/last-commit/vugar005/ngx-uploader-file.svg)](https://github.com/vugar005/ngx-uploader-file) ![npm](https://img.shields.io/readthedocs/ngx-uploader-file.svg)
 
 This is an Angular Library for uploading files. It supports: File Upload and Preview (additionally preview images with lightbox), validation, image cropper , drag and drop with multi language support.
 
 Tested on Angular Angular 6+. Supports Server Side Rendering.
 
-> **Breaking Changes:** [Check Changes](https://github.com/vugar005/ngx-uploader/blob/master/breaking-changes-v10.md) changes if you come from version < 10.
+> **Breaking Changes:** [Check Changes](https://github.com/vugar005/ngx-uploader-file/blob/master/breaking-changes-v10.md) changes if you come from version < 10.
 
 - [Install](#install)
 - [Usage](#usage)
@@ -24,18 +24,18 @@ Tested on Angular Angular 6+. Supports Server Side Rendering.
 
 ## Quick-links
 
-[Example Application](https://ngx-uploader.stackblitz.io/) or
+[Example Application](https://ngx-uploader-file.stackblitz.io/) or
 
-[StackBlitzDemo](https://stackblitz.com/edit/ngx-uploader?file=src%2Fapp%2Fsimple-demo%2Fsimple-demo.component.ts)
+[StackBlitzDemo](https://stackblitz.com/edit/ngx-uploader-file?file=src%2Fapp%2Fsimple-demo%2Fsimple-demo.component.ts)
 
 ## Install
 
-npm install ngx-uploader --save
+npm install ngx-uploader-file --save
 
 ##### Load the module for your app:
 
 ```typescript
-import { FilePickerModule } from  'ngx-uploader';
+import { FilePickerModule } from  'ngx-uploader-file';
 
 @NgModule({
   imports: [
@@ -52,7 +52,7 @@ In order to make library maximum compatible with apis you need to create and pro
 custom adapter </b> which implements upload and remove requests. That's because I have no idea how to get file id in upload response json :) .
 So this libray exposes a FilePickerAdapter abstract class which you can import on your new class file definition:
 
-` import { FilePickerAdapter } from 'ngx-uploader';`
+` import { FilePickerAdapter } from 'ngx-uploader-file';`
 
 After importing it to your custom adapter implementation (EG: CustomAdapter.ts), you must implement those 2 methods which are abstract in the FilePickerAdapter base class which are:
 
@@ -62,12 +62,12 @@ public abstract uploadFile(fileItem: FilePreviewModel): Observable<UploadRespons
 public abstract removeFile(fileItem: FilePreviewModel): Observable<any>;
 ```
 
-You can check DEMO adapter [here](https://github.com/vugar005/ngx-uploader/tree/master/projects/file-picker/src/lib/mock-file-picker.adapter.ts)
+You can check DEMO adapter [here](https://github.com/vugar005/ngx-uploader-file/tree/master/projects/file-picker/src/lib/mock-file-picker.adapter.ts)
 
 #### Now you can use it in your template
 
 ```html
-<ngx-uploader [adapter]="adapter"> </ngx-uploader>
+<ngx-uploader-file [adapter]="adapter"> </ngx-uploader-file>
 ```
 
 #### and in the Component:
@@ -90,7 +90,7 @@ export class DemoFilePickerComponent {
 
 > **Note:** As you see you should provide http instance to adapter.
 
-Still in Doubt? Check [Minimal Setup Demo](https://stackblitz.com/edit/ngx-uploader?file=src%2Fapp%2Fsimple-demo%2Fsimple-demo.component.ts)
+Still in Doubt? Check [Minimal Setup Demo](https://stackblitz.com/edit/ngx-uploader-file?file=src%2Fapp%2Fsimple-demo%2Fsimple-demo.component.ts)
 
 ## API
 
@@ -189,7 +189,7 @@ Emitted for every file */
 
 All validations are emitted through <b> ValidationError </b>event.
 
-To listen to validation errors (in case you provided validations), validationError event is emitted. validationError event implements interface [ValidationError](https://github.com/vugar005/ngx-uploader/blob/master/projects/file-picker/src/lib/validation-error.model.ts)
+To listen to validation errors (in case you provided validations), validationError event is emitted. validationError event implements interface [ValidationError](https://github.com/vugar005/ngx-uploader-file/blob/master/projects/file-picker/src/lib/validation-error.model.ts)
 and which emits failed file and error type.
 
 Supported validations:
@@ -226,10 +226,10 @@ public myCustomValidator(file: File): Observable<boolean> {
 and pass to Template:
 
 ```html
-<ngx-uploader [customValidator]="myCustomValidator"> </ngx-uploader>
+<ngx-uploader-file [customValidator]="myCustomValidator"> </ngx-uploader-file>
 ```
 
-Check [Demo](https://stackblitz.com/edit/ngx-uploader?file=src%2Fapp%2Fadvanced-demo%2Fadvanced-demo.component.html)
+Check [Demo](https://stackblitz.com/edit/ngx-uploader-file?file=src%2Fapp%2Fadvanced-demo%2Fadvanced-demo.component.html)
 
 ## Cropper
 
@@ -251,21 +251,21 @@ You can provide custom template to library.
 I) To provide custom template for drag and drop zone, use content projection. Example:
 
 ```html
-<ngx-uploader [adapter]="adapter">
+<ngx-uploader-file [adapter]="adapter">
   <div class="dropzoneTemplate">
     <button>Custom</button>
   </div>
-</ngx-uploader>
+</ngx-uploader-file>
 ```
 
 > **Note:** The wrapper of your custom template must have a class **dropzoneTemplate**.
 
-[Checkout Demo](https://stackblitz.com/edit/ngx-uploader?file=src%2Fapp%2Fadvanced-demo%2Fadvanced-demo.component.html)
+[Checkout Demo](https://stackblitz.com/edit/ngx-uploader-file?file=src%2Fapp%2Fadvanced-demo%2Fadvanced-demo.component.html)
 
 II) To use custom file preview template, pass your custom template as below:
 
 ```html
-<ngx-uploader #uploader [adapter]="adapter" [itemTemplate]="itemTemplate"> </ngx-uploader>
+<ngx-uploader-file #uploader [adapter]="adapter" [itemTemplate]="itemTemplate"> </ngx-uploader-file>
 
 <ng-template #itemTemplate let-fileItem="fileItem" let-uploadProgress="uploadProgress">
   <p>{{fileItem.file.size}}</p>
@@ -278,13 +278,13 @@ II) To use custom file preview template, pass your custom template as below:
 </ng-template>
 ```
 
-In custom template <b>uploadProgress</b> and <b>fileItem</b> (which implements [FilePrevieModel](https://github.com/vugar005/ngx-uploader/blob/master/projects/file-picker/src/lib/file-preview.model.ts) interface) are exposed .
+In custom template <b>uploadProgress</b> and <b>fileItem</b> (which implements [FilePrevieModel](https://github.com/vugar005/ngx-uploader-file/blob/master/projects/file-picker/src/lib/file-preview.model.ts) interface) are exposed .
 
 ## Multi Language
 
-You can add multi language support for library by providing **_captions_** object (which implements [UploaderCaptions](https://github.com/vugar005/ngx-uploader/blob/master/projects/file-picker/src/lib/uploader-captions.ts) interface).
+You can add multi language support for library by providing **_captions_** object (which implements [UploaderCaptions](https://github.com/vugar005/ngx-uploader-file/blob/master/projects/file-picker/src/lib/uploader-captions.ts) interface).
 
-Check [Demo](https://stackblitz.com/edit/ngx-uploader?file=src%2Fapp%2Fadvanced-demo%2Fadvanced-demo.component.html)
+Check [Demo](https://stackblitz.com/edit/ngx-uploader-file?file=src%2Fapp%2Fadvanced-demo%2Fadvanced-demo.component.html)
 
 ## Edit Mode
 

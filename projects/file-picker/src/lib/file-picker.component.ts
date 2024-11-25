@@ -31,7 +31,7 @@ import { takeUntilDestroyed } from "@angular/core/rxjs-interop";
 
 declare var Cropper;
 @Component({
-  selector: "ngx-uploader",
+  selector: "ngx-uploader-file",
   templateUrl: "./file-picker.component.html",
   styleUrls: ["./file-picker.component.scss"],
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -104,7 +104,7 @@ export class FilePickerComponent implements OnInit, OnDestroy {
   constructor(
     private readonly fileService: FilePickerService,
     private readonly fileValidatorService: FileValidatorService,
-    private readonly changeRef: ChangeDetectorRef,
+    private readonly changeRef: ChangeDetectorRef
   ) {}
 
   public ngOnInit(): void {
@@ -148,7 +148,7 @@ export class FilePickerComponent implements OnInit, OnDestroy {
         .pipe(
           takeUntilDestroyed(),
           bufferCount(droppedFilesCount),
-          switchMap((filesForUpload) => this.handleFiles(filesForUpload)),
+          switchMap((filesForUpload) => this.handleFiles(filesForUpload))
         )
         .subscribe();
     });
@@ -228,7 +228,7 @@ export class FilePickerComponent implements OnInit, OnDestroy {
         files.forEach((file: File, index: number) => {
           this.handleInputFile(file, index);
         });
-      }),
+      })
     );
   }
 
@@ -259,7 +259,7 @@ export class FilePickerComponent implements OnInit, OnDestroy {
             error: FileValidationTypes.customValidator,
           });
         }
-      }),
+      })
     );
   }
 
@@ -332,7 +332,7 @@ export class FilePickerComponent implements OnInit, OnDestroy {
       this.changeRef.detectChanges();
     } else {
       console.warn(
-        "please import cropperjs script and styles to use cropper feature or disable it by setting [enableCropper]='false'",
+        "please import cropperjs script and styles to use cropper feature or disable it by setting [enableCropper]='false'"
       );
       return;
     }
@@ -380,7 +380,7 @@ export class FilePickerComponent implements OnInit, OnDestroy {
     const isValidTotalFileSize: boolean = this.fileValidatorService.isValidTotalFileSize(
       newFile,
       this.files,
-      this.totalMaxSize,
+      this.totalMaxSize
     );
 
     if (!isValidFileSize) {

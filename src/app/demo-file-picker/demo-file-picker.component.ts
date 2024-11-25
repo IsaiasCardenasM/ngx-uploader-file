@@ -1,4 +1,4 @@
-import { FilePickerComponent, ValidationError, FilePreviewModel, UploaderCaptions } from "ngx-uploader";
+import { FilePickerComponent, ValidationError, FilePreviewModel, UploaderCaptions } from "ngx-uploader-file";
 import { HttpClient, HttpErrorResponse } from "@angular/common/http";
 import { DemoFilePickerAdapter } from "./demo-file-picker.adapter";
 import { Component, OnInit, ViewChild } from "@angular/core";

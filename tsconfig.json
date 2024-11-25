@@ -13,7 +13,7 @@
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
     "paths": {
-      "ngx-uploader": ["projects/file-picker/src/public_api"],
+      "ngx-uploader-file": ["projects/file-picker/src/public_api"],
       "file-picker": ["dist/file-picker"],
       "file-picker/*": ["dist/file-picker/*"]
     },

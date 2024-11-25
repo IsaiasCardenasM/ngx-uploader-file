@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ngx-uploader": {
+    "ngx-uploader-file": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -18,7 +18,7 @@
           "builder": "@angular-devkit/build-angular:application",
           "options": {
             "outputPath": {
-              "base": "dist/ngx-uploader"
+              "base": "dist/ngx-uploader-file"
             },
             "index": "src/index.html",
             "polyfills": ["src/polyfills.ts"],
@@ -56,14 +56,14 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "buildTarget": "ngx-uploader:build"
+            "buildTarget": "ngx-uploader-file:build"
           },
           "configurations": {
             "production": {
-              "buildTarget": "ngx-uploader:build:production"
+              "buildTarget": "ngx-uploader-file:build:production"
             },
             "development": {
-              "buildTarget": "ngx-uploader:build:development"
+              "buildTarget": "ngx-uploader-file:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "ngx-uploader:build"
+            "buildTarget": "ngx-uploader-file:build"
           }
         },
         "test": {

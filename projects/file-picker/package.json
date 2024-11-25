@@ -1,5 +1,5 @@
 {
-  "name": "ngx-uploader",
+  "name": "ngx-uploader-file",
   "version": "18.0.0",
   "description": "Angular Library for uploading files with Real-Time Progress bar, File Preview, Drag && Drop and Custom Template with Multi Language support",
   "peerDependencies": {
@@ -19,7 +19,7 @@
     "angular file upload"
   ],
   "license": "MIT",
-  "repository": "https://github.com/IsaiasCardenasM/ngx-uploader",
+  "repository": "https://github.com/IsaiasCardenasM/ngx-uploader-file",
   "author": {
     "name": "Isaias Cardenas"
   },
