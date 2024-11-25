@@ -1,8 +1,12 @@
-# NGX-UPLOADER
+# NGX-AWESOME-UPLOADER
+
+![alt-text](https://raw.githubusercontent.com/vugar005/ngx-uploader/master/angular-image.gif?raw=true)
+
+[![npm](https://img.shields.io/npm/l/ngx-uploader.svg)]() [![NPM Downloads](https://img.shields.io/npm/dt/ngx-uploader.svg)](https://www.npmjs.com/package/ngx-uploader) [![npm demo](https://img.shields.io/badge/demo-online-ed1c46.svg)](https://stackblitz.com/edit/ngx-uploader?file=src%2Fapp%2Fsimple-demo%2Fsimple-demo.component.ts) [![npm](https://img.shields.io/twitter/follow/vugar005.svg?label=Follow)](https://twitter.com/vugar005) [![npm](https://img.shields.io/github/issues/vugar005/ngx-uploader.svg)](https://github.com/vugar005/ngx-uploader) [![npm](https://img.shields.io/github/last-commit/vugar005/ngx-uploader.svg)](https://github.com/vugar005/ngx-uploader) ![npm](https://img.shields.io/readthedocs/ngx-uploader.svg)
 
 This is an Angular Library for uploading files. It supports: File Upload and Preview (additionally preview images with lightbox), validation, image cropper , drag and drop with multi language support.
 
-Tested on Angular 6+. Supports Server Side Rendering.
+Tested on Angular Angular 6+. Supports Server Side Rendering.
 
 > **Breaking Changes:** [Check Changes](https://github.com/vugar005/ngx-uploader/blob/master/breaking-changes-v10.md) changes if you come from version < 10.
 
