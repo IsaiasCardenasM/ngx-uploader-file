@@ -16,12 +16,16 @@ import { GET_FILE_CATEGORY_TYPE, GET_FILE_TYPE, IS_IMAGE_FILE } from "../../file
 import { Subscription } from "rxjs";
 import { FilePickerAdapter, UploadResponse, UploadStatus } from "../../file-picker.adapter";
 import { UploaderCaptions } from "../../uploader-captions";
+import { NgClass, NgStyle, NgTemplateOutlet } from "@angular/common";
+import { RefreshIconComponent } from "./refresh-icon/refresh-icon.component";
+import { CloseIconComponent } from "../../icons/close-icon/close-icon.component";
 
 @Component({
-  selector: "file-preview-item",
-  templateUrl: "./file-preview-item.component.html",
-  styleUrls: ["./file-preview-item.component.scss"],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: "file-preview-item",
+    templateUrl: "./file-preview-item.component.html",
+    styleUrls: ["./file-preview-item.component.scss"],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    imports: [NgClass, RefreshIconComponent, CloseIconComponent, NgStyle, NgTemplateOutlet]
 })
 export class FilePreviewItemComponent implements OnInit {
   @Output() public readonly removeFile = new EventEmitter<FilePreviewModel>();

@@ -28,13 +28,17 @@ import { DEFAULT_CROPPER_OPTIONS } from "./file-picker.constants";
 import { lookup } from "mrmime";
 import { FileValidatorService } from "./services/file-validator/file-validator.service";
 import { takeUntilDestroyed } from "@angular/core/rxjs-interop";
+import { FileDropModule } from "./file-drop/file-drop.module";
+import { NgClass } from "@angular/common";
+import { FilePreviewContainerComponent } from "./file-preview-container/file-preview-container.component";
 
 declare var Cropper;
 @Component({
-  selector: "ngx-uploader-file",
-  templateUrl: "./file-picker.component.html",
-  styleUrls: ["./file-picker.component.scss"],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: "ngx-uploader-file",
+    templateUrl: "./file-picker.component.html",
+    styleUrls: ["./file-picker.component.scss"],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    imports: [FileDropModule, NgClass, FilePreviewContainerComponent]
 })
 export class FilePickerComponent implements OnInit, OnDestroy {
   /** Emitted when file upload via api successfully. Emitted for every file */

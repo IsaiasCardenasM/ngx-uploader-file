@@ -9,8 +9,8 @@ describe("CloudIconComponent", () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [CloudIconComponent],
-    }).compileComponents();
+    imports: [CloudIconComponent],
+}).compileComponents();
   });
 
   beforeEach(() => {

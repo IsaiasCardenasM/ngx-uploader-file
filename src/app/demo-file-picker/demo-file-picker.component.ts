@@ -4,11 +4,13 @@ import { DemoFilePickerAdapter } from "./demo-file-picker.adapter";
 import { Component, OnInit, ViewChild } from "@angular/core";
 import { Observable, of } from "rxjs";
 import { delay } from "rxjs/operators";
+import { FilePickerComponent as FilePickerComponent_1 } from "../../../projects/file-picker/src/lib/file-picker.component";
 
 @Component({
-  selector: "app-demo-file-picker",
-  templateUrl: "./demo-file-picker.component.html",
-  styleUrls: ["./demo-file-picker.component.scss"],
+    selector: "app-demo-file-picker",
+    templateUrl: "./demo-file-picker.component.html",
+    styleUrls: ["./demo-file-picker.component.scss"],
+    imports: [FilePickerComponent_1]
 })
 export class DemoFilePickerComponent implements OnInit {
   @ViewChild("uploader", { static: true }) uploader: FilePickerComponent;

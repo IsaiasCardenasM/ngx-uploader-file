@@ -9,16 +9,13 @@ import { FileDropModule } from "./file-drop/file-drop.module";
 import { PreviewLightboxComponent } from "./file-preview-container/preview-lightbox/preview-lightbox.component";
 import { RefreshIconComponent } from "./file-preview-container/file-preview-item/refresh-icon/refresh-icon.component";
 @NgModule({
-  imports: [CommonModule, FileDropModule],
-  declarations: [
-    FilePickerComponent,
-    FilePreviewContainerComponent,
-    FilePreviewItemComponent,
-    PreviewLightboxComponent,
-    RefreshIconComponent,
-    CloseIconComponent,
-  ],
-  exports: [FilePickerComponent],
-  providers: [FilePickerService],
+    imports: [CommonModule, FileDropModule, FilePickerComponent,
+        FilePreviewContainerComponent,
+        FilePreviewItemComponent,
+        PreviewLightboxComponent,
+        RefreshIconComponent,
+        CloseIconComponent],
+    exports: [FilePickerComponent],
+    providers: [FilePickerService],
 })
 export class FilePickerModule {}

@@ -3,12 +3,15 @@ import { FilePreviewModel } from "../file-preview.model";
 import { FilePickerAdapter } from "../file-picker.adapter";
 import { UploaderCaptions } from "../uploader-captions";
 import { HttpErrorResponse } from "@angular/common/http";
+import { PreviewLightboxComponent } from "./preview-lightbox/preview-lightbox.component";
+import { FilePreviewItemComponent } from "./file-preview-item/file-preview-item.component";
 
 @Component({
-  selector: "file-preview-container",
-  templateUrl: "./file-preview-container.component.html",
-  styleUrls: ["./file-preview-container.component.scss"],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: "file-preview-container",
+    templateUrl: "./file-preview-container.component.html",
+    styleUrls: ["./file-preview-container.component.scss"],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    imports: [PreviewLightboxComponent, FilePreviewItemComponent]
 })
 export class FilePreviewContainerComponent implements OnInit {
   @Input() previewFiles: FilePreviewModel[];

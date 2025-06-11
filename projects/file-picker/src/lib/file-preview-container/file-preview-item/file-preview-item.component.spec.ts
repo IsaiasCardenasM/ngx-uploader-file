@@ -21,10 +21,10 @@ describe("FilePreviewComponent", () => {
   let fixture: ComponentFixture<FilePreviewItemComponent>;
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [FilePreviewItemComponent],
-      providers: [FilePickerService],
-      schemas: [NO_ERRORS_SCHEMA],
-    }).compileComponents();
+    imports: [FilePreviewItemComponent],
+    providers: [FilePickerService],
+    schemas: [NO_ERRORS_SCHEMA],
+}).compileComponents();
   });
 
   beforeEach(() => {

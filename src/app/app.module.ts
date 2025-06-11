@@ -7,9 +7,9 @@ import { HttpClientModule } from "@angular/common/http";
 import { FilePickerModule } from "projects/file-picker/src/public_api";
 
 @NgModule({
-  declarations: [AppComponent, DemoFilePickerComponent],
-  imports: [BrowserModule, FilePickerModule, HttpClientModule],
-  providers: [],
-  bootstrap: [AppComponent],
+    declarations: [AppComponent],
+    imports: [BrowserModule, FilePickerModule, HttpClientModule, DemoFilePickerComponent],
+    providers: [],
+    bootstrap: [AppComponent],
 })
 export class AppModule {}
